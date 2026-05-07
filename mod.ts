@@ -5,6 +5,9 @@
 
 type EventCallback<T> = (data: T) => void;
 
+/**
+ * A class to construct a pubsub instance.
+ */
 export class PubSub<T> {
   private events: Record<string, EventCallback<T>[]> = {};
 
